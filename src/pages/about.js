@@ -1,13 +1,39 @@
 import React from "react"
 import Layout from "../components/Layout"
 import styled from "styled-components"
-
-const about = () => {
+import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
+const About = () => {
   return (
     <Layout>
-      <h1>About Page</h1>
+      <main className="page">
+        <section className="about-page">
+          <article>
+            <h2>Lorem, ipsum dolor sit amet </h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero sed
+              exercitationem aliquam alias optio sint voluptas vitae, labore
+              temporibus repudiandae. Nemo vitae, beatae deleniti soluta quas
+              quam voluptatum est nisi!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+              amet excepturi laboriosam sunt odio cum ipsum minus fuga, ut at.
+            </p>
+            <Link to="/contact" className="btn">
+              contact
+            </Link>
+          </article>
+          <StaticImage
+            src="../assets/images/about.jpeg"
+            alt="Person Pouring Salt in Bowl"
+            className="about-img"
+            placeholder="blurred"
+          />
+        </section>
+      </main>
     </Layout>
   )
 }
 
-export default about
+export default About
