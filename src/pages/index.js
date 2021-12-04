@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 
+import FetchData from "../examples/FetchData"
+
 export default function Home() {
   return (
     <Layout>
@@ -22,6 +24,7 @@ export default function Home() {
             </div>
           </div>
         </header>
+        <FetchData />
       </main>
     </Layout>
   )
