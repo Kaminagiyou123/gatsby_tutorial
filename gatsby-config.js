@@ -4,6 +4,9 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -30,10 +33,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-contentful`,
       options: {
-        name: `examples`,
-        path: `${__dirname}/src/examples`,
+        spaceId: `797717azs16g`,
+        accessToken: process.env.CONTENTFUL_API_KEY,
       },
     },
   ],
