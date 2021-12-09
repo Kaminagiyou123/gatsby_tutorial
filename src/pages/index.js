@@ -3,9 +3,11 @@ import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import AllRecipes from "../components/AllRecipes"
+import SEO from "../components/SEO"
 export default function Home() {
   return (
     <Layout>
+      <SEO title="Home" description="this is home page" />
       <main className="page">
         <header className="hero">
           <StaticImage
